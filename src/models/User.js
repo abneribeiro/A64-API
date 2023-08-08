@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true },
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
-  dateCriacao: { type: Date, default: formattedDate },
+  createdAt: { type: Date, default: formattedDate },
 });
 
 userSchema.pre("save", async function (next) {

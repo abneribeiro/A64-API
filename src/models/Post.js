@@ -11,7 +11,7 @@ const postSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  dateCriacao: { type: Date, default: formattedDate },
+  createdAt: { type: Date, default: formattedDate },
 });
 
 // ver uma forma de converter o title em lowecase antes de consultar o banco de dados

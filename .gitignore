@@ -1,0 +1,36 @@
+# Arquivos de configuração
+node_modules/
+.env
+.env.local
+.env.*.local
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Arquivos de log
+logs/
+*.log
+
+# Arquivos gerados
+dist/
+build/
+
+# Arquivos IDE e editores de texto específicos
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Dependendo do ambiente de desenvolvimento:
+# .env.production
+# .env.development
+# .env.test
+
+# Dependendo do gerenciador de pacotes usado (npm ou yarn):
+# package-lock.json
+# yarn.lock

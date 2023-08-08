@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const moment = require('moment')
+const moment = require("moment");
 
-const currentDate = moment()
-const formattedDate = current 
+const currentDate = moment();
+const formattedDate = currentDate.format("YYYY-MM-DD HH:mm:ss");
 const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true },
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
-  dateCriacao: {type: Date, }
+  dateCriacao: { type: Date, default: formattedDate },
 });
 
 userSchema.pre("save", async function (next) {

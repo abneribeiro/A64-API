@@ -116,3 +116,116 @@ This project is a simple application developed to demonstrate the basic function
 Thank you for reviewing this project. Feel free to get in touch if you have any questions or suggestions for improvement.r): User's password.
   - `createdAt` (string): Date and time of user creation.
   - `actions` (array): List of actions performed by the user (not yet implemented).
+
+
+
+
+
+
+  ----
+
+## Documentação do Projeto Backend: Criação de Usuários e Posts
+
+Bem-vindo à documentação do projeto Backend de Criação de Usuários e Posts. Este projeto implementa um sistema onde os usuários podem se registrar, fazer login e criar posts.
+
+### Índice
+
+1.  Requisitos e Configuração
+
+  - Requisitos do Sistema
+  - Instalação
+  - Configuração do Banco de Dados
+
+2.  Estrutura de Pastas e Arquivos
+
+  - Descrição da Organização de Pastas
+  - Arquivos Principais
+
+3.  Endpoints e Funcionalidades
+
+    - `/auth/register` - Registro de Usuário
+    - `/auth/login` - Login de Usuário
+    - `/posts/create` - Criação de Post
+    - `/posts/:id` - Exclusão de Post
+    - `/posts/all`- Listagem de Posts
+
+4. Autenticação e Autorização
+
+    - Middleware de Autenticação
+    - Autorização para Criação e Exclusão de Posts
+
+
+### Tecnologias Utilizadas
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+- Bcrypt.js
+
+### Estrutura de Pastas
+
+```
+project-backend/
+├── controllers/
+│   ├── authController.js
+│   ├── postController.js
+├── middleware/
+│   ├── authMiddleware.js
+├── models/
+│   ├── User.js
+│   ├── Post.js
+├── routes/
+│   ├── authRoutes.js
+│   ├── postRoutes.js
+├── app.js
+```
+
+### Configuração do Projeto
+
+1. Clone este repositório em sua máquina local.
+2. Execute `npm install` para instalar as dependências.
+3. Crie um arquivo `.env` na raiz do projeto e defina uma chave secreta para o JWT:
+
+```plaintext
+JWT_SECRET=seu_token_secreto
+```
+
+### Registro e Autenticação de Usuários
+
+#### 1. Rota de Registro: `POST /auth/register`
+
+Permite que os usuários se registrem no sistema.
+
+
+#### 2. Rota de Login: `POST /auth/login`
+
+Permite que os usuários façam login e recebam um token JWT.
+
+
+### Criação e Gerenciamento de Posts
+
+#### 1. Rota de Criação de Post: `POST /posts/create`
+
+Permite que os usuários autenticados criem novos posts.
+
+#### 2. Rota de Deleção de Post: `DELETE /posts/:id`
+
+Permite que os usuários autenticados excluam seus próprios posts.
+
+### Executando o Projeto
+
+1. Execute `npm start` para iniciar o servidor.
+2. Use ferramentas como o [Postman](https://www.postman.com/) para testar as rotas.
+
+---
+### Considerações Finais
+
+Este projeto serve como um exemplo de criação de um sistema de Backend para registro, autenticação e gerenciamento de posts. Lembre-se de adaptar o código e a estrutura para atender às necessidades específicas do seu projeto.
+
+Isso conclui a documentação do projeto Backend de Criação de Usuários e Posts. Se você tiver alguma dúvida ou precisar de mais informações, consulte o código-fonte e as seções relevantes acima.
+
+### Licença
+
+Este projeto é licenciado sob a [Licença MIT](LICENSE).

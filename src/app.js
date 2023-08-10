@@ -21,7 +21,7 @@ mongoose
 
 app.use(express.json());
 
-// Rotas de autenticação
+// Rotas de autenticação // mudar para rota users,pegar mesmo num papel e desenhar as rotas
 app.use("/auth", authRoutes);
 
 // Rotas de posts

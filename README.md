@@ -1,4 +1,4 @@
-<div style="background-color: #161617; padding: 20px;">
+<div style="background-color: ##f6f6f6; padding: 20px;">
 
   <h1 style ="text-align: center; color: #07c4da;">A63 CRUD</h1>
 
@@ -39,6 +39,8 @@ The application was developed to provide a simple interface for creating, viewin
   - Endpoint: `POST /auth/login`
   - Description: The user login by entering the name and password and generated a token.
   - Parameters:
+    - `username` (string): User's name.
+    - `password` (string): User's password.
 
 ### 2. View User by ID
 

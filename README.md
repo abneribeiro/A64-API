@@ -1,15 +1,19 @@
-## A63 CRUD
+<div style="background-color: #161617; padding: 20px;">
 
-This project is a CRUD (Create, Read, Update, Delete) application developed in Node.js that uses a JSON file as a database. The application allows users to be created with a name and password, and once created, they can create posts. Each user will have their `userId` associated with each post.
+  <h1 style ="text-align: center; color: #07c4da;">A63 CRUD</h1>
 
-The application was developed to provide a simple interface for creating, viewing, updating, and deleting users and their respective posts.
+This project is a CRUD (Create, Read, Update, Delete) application developed in Node.js using the MongoDB database. The application allows users to be created with a username and password, and once created, they can create quotes. Each user will have their `userId` associated with each quote.
+
+The application was developed to provide a simple interface for creating, viewing, updating, and deleting users and their respective quotes.
 
 ## Technologies Used
 
 - Node.js: Backend development platform.
 - Express.js: Web framework for Node.js that facilitates the creation of routes and APIs.
-- JSON: File format used as the database to store users and posts.
-- HTML and JavaScript: Used in the frontend to interact with the backend through HTTP requests.
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+- Bcrypt.js
 
 ## Features
 
@@ -37,8 +41,6 @@ The application was developed to provide a simple interface for creating, viewin
   - `id` (number): User's ID.
   - `name` (string): User's name.
   - `password` (string)
-  
-
 
 ### 3. Update User by ID
 
@@ -89,12 +91,16 @@ The application was developed to provide a simple interface for creating, viewin
   - `content` (string): Post content.
   - `createdAt` (string): Date and time of post creation.
 
-
 ## Next Steps / Roadmap
 
 1. Authentication
+
+
     - Add authentication to ensure that only authenticated users can create posts and perform other actions.
+
 2. Database
+
+
     - Implement a more robust database, such as MongoDB, to improve the scalability and performance of the application.
 
 ## How to Run the Project
@@ -114,15 +120,11 @@ The application was developed to provide a simple interface for creating, viewin
 This project is a simple application developed to demonstrate the basic functionality of a CRUD with Node.js and JSON as the database. The code has been organized into modules to facilitate understanding and maintenance.
 
 Thank you for reviewing this project. Feel free to get in touch if you have any questions or suggestions for improvement.r): User's password.
-  - `createdAt` (string): Date and time of user creation.
-  - `actions` (array): List of actions performed by the user (not yet implemented).
 
+- `createdAt` (string): Date and time of user creation.
+- `actions` (array): List of actions performed by the user (not yet implemented).
 
-
-
-
-
-  ----
+---
 
 ## Documentação do Projeto Backend: Criação de Usuários e Posts
 
@@ -132,14 +134,14 @@ Bem-vindo à documentação do projeto Backend de Criação de Usuários e Posts
 
 1.  Requisitos e Configuração
 
-  - Requisitos do Sistema
-  - Instalação
-  - Configuração do Banco de Dados
+    - Requisitos do Sistema
+    - Instalação
+    - Configuração do Banco de Dados
 
 2.  Estrutura de Pastas e Arquivos
 
-  - Descrição da Organização de Pastas
-  - Arquivos Principais
+    - Descrição da Organização de Pastas
+    - Arquivos Principais
 
 3.  Endpoints e Funcionalidades
 
@@ -149,20 +151,11 @@ Bem-vindo à documentação do projeto Backend de Criação de Usuários e Posts
     - `/posts/:id` - Exclusão de Post
     - `/posts/all`- Listagem de Posts
 
-4. Autenticação e Autorização
+4.  Autenticação e Autorização
 
     - Middleware de Autenticação
     - Autorização para Criação e Exclusão de Posts
 
-
-### Tecnologias Utilizadas
-
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JSON Web Tokens (JWT)
-- Bcrypt.js
 
 ### Estrutura de Pastas
 
@@ -198,11 +191,9 @@ JWT_SECRET=seu_token_secreto
 
 Permite que os usuários se registrem no sistema.
 
-
 #### 2. Rota de Login: `POST /auth/login`
 
 Permite que os usuários façam login e recebam um token JWT.
-
 
 ### Criação e Gerenciamento de Posts
 
@@ -220,6 +211,7 @@ Permite que os usuários autenticados excluam seus próprios posts.
 2. Use ferramentas como o [Postman](https://www.postman.com/) para testar as rotas.
 
 ---
+
 ### Considerações Finais
 
 Este projeto serve como um exemplo de criação de um sistema de Backend para registro, autenticação e gerenciamento de posts. Lembre-se de adaptar o código e a estrutura para atender às necessidades específicas do seu projeto.
@@ -229,3 +221,5 @@ Isso conclui a documentação do projeto Backend de Criação de Usuários e Pos
 ### Licença
 
 Este projeto é licenciado sob a [Licença MIT](LICENSE).
+
+</div>

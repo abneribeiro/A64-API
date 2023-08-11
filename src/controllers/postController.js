@@ -13,12 +13,13 @@ exports.createPost = async (req, res) => {
 };
 
 exports.getAllPosts = async (req, res) => {
-  const posts = await Post.find().populate('author', 'username');
+  const userId = req.params.userId
+  const posts = await Post.find({ author: userId });
   res.json(posts);
 };
 
 exports.getPostById = async (req, res) => {
-  const postId = req.params.id;
+  const postId = req.params.quoteId;
   const post = await Post.findById(postId).populate('author', 'username');
   if (!post) return res.status(404).json({ message: 'Post not found' });
   res.json(post);

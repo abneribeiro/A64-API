@@ -1,5 +1,5 @@
 const express = require("express");
-const userControllers = require('../controllers/userController')
+const userControllers = require("../controllers/userController");
 const { body } = require("express-validator");
 
 const router = express.Router();
@@ -18,6 +18,6 @@ router.post(
 
 router.post("/login", userControllers.loginUSer);
 
-router.delete("/del/:id", userControllers.deleteUser );
+router.delete("/del/:id", userControllers.deleteUser);
 
 module.exports = router;

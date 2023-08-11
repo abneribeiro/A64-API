@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
-const postRoutes = require("./routes/postRoutes")
+const postRoutes = require("./routes/postRoutes");
+
 // Carregar as variáveis de ambiente do arquivo .env
 dotenv.config();
 
@@ -21,13 +22,10 @@ mongoose
 
 app.use(express.json());
 
-// Rotas de user 
 app.use("/user", userRoutes);
 
-// Rotas de posts
-app.use("/post", postRoutes)
+app.use("/post", postRoutes);
 
-// Porta do servidor
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

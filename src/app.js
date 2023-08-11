@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const dotenv = require("dotenv");
-const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes")
 // Carregar as variáveis de ambiente do arquivo .env
 dotenv.config();
@@ -22,10 +22,10 @@ mongoose
 app.use(express.json());
 
 // Rotas de autenticação // mudar para rota users,pegar mesmo num papel e desenhar as rotas
-app.use("/auth", authRoutes);
+app.use("/user", userRoutes);
 
 // Rotas de posts
-app.use("/posts", postRoutes)
+app.use("/post", postRoutes)
 
 // Porta do servidor
 const port = process.env.PORT || 3000;

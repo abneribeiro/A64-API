@@ -1,5 +1,5 @@
 const express = require("express");
-const authControllers = require('../controllers/authController')
+const userControllers = require('../controllers/userController')
 const { body } = require("express-validator");
 
 const router = express.Router();
@@ -13,11 +13,11 @@ router.post(
     body("email").isEmail().withMessage("Invalid email address."),
     body("password").isStrongPassword().withMessage("Password must be strong."),
   ],
-  authControllers.register
+  userControllers.register
 );
 
-router.post("/login", authControllers.loginUSer);
+router.post("/login", userControllers.loginUSer);
 
-router.delete("/delete/:id", authControllers.deleteUser );
+router.delete("/delete/:id", userControllers.deleteUser );
 
 module.exports = router;

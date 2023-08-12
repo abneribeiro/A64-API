@@ -20,6 +20,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
+  
 app.use(express.json());
 
 app.use("/user", userRoutes);

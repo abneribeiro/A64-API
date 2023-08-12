@@ -1,5 +1,3 @@
-<div style=" padding: 20px; font-family:  Helvetica, sans-serif;">
-
   <h1 style ="text-align: center; color:#DBEF80; font-weight: bold">A63 POST API</h1>
     
 <p style ="text-align: justify;"> This project is a application developed in Node.js using the MongoDB database. The application allows users to be created with a username, email and password, and once created, they can create posts. Each user will have their <span style="font-weight:bold"> userId</span> associated with each post.
@@ -142,4 +140,3 @@ project-backend/
 - Response (JSON):
   - `message` User post deleted
 
-</div>

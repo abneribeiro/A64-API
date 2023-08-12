@@ -1,4 +1,4 @@
-  <h1 style ="text-align: center; color:#DBEF80; font-weight: bold;">A63 POST API</h1>
+  <h1 style ="text-align: center; color:#DBEF80; font-weight: bold;">A64 POST API</h1>
     
 This project is an application developed in Node.js using the MongoDB database. The application allows users to be created with a username, email, and password. Once created, they can create posts. Each user will have their **userId** associated with each post.
 
@@ -20,7 +20,7 @@ This project is an application developed in Node.js using the MongoDB database. 
 - Middleware
 - Added authentication to ensure that only authenticated users can create posts and perform other actions.
 
- <h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">How to Run the Project</h2>
+ <h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">How To Run The Project</h2>
 
 1. Clone the repository to your local machine using the command `git clone <https://github.com/abneribeiro/A64-API.git>`.
 

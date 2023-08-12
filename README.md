@@ -1,4 +1,4 @@
-<div style="background-color: #0A141F; padding: 20px; font-family:  Helvetica, sans-serif;">
+<div style=" padding: 20px; font-family:  Helvetica, sans-serif;">
 
   <h1 style ="text-align: center; color:#DBEF80; font-weight: bold">A63 POST API</h1>
     

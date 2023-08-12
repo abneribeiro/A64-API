@@ -23,6 +23,9 @@ mongoose
   
 app.use(express.json());
 
+app.get("/", (req, res)=>{
+  res.status(201).json({message: "its okay Abner", warning:"read the documentation"})
+})
 app.use("/user", userRoutes);
 
 app.use("/post", postRoutes);

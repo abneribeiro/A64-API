@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require('cors')
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
@@ -11,6 +12,8 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
+app.use(cors())
+
 // Conectar ao banco de dados MongoDB
 mongoose
   .connect(process.env.MONGODB_URI, {
@@ -20,12 +23,13 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
-  
 app.use(express.json());
 
-app.get("/", (req, res)=>{
-  res.status(201).json({message: "its okay Abner", warning:"read the documentation"})
-})
+app.get("/", (req, res) => {
+  res
+    .status(201)
+    .json({ message: "its okay Abner", warning: "read the documentation" });
+});
 app.use("/user", userRoutes);
 
 app.use("/post", postRoutes);

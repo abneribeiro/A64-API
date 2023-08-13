@@ -35,12 +35,33 @@ exports.loginUSer = async (req, res) => {
       res.status(401).json({ error: "Invalid credentials." });
     }
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "24h",
     });
 
     res.json({ token });
   } catch (error) {
     res.status(500).json({ error: "Failed to authenticate user." });
+  }
+};
+
+exports.updateUser = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const { username, email, password } = req.body;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { username, email, password },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ error: "user not found" });
+    }
+
+    res.status(201).json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ error: "Error updating the user." });
   }
 };
 

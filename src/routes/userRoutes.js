@@ -31,6 +31,7 @@ router.put(
   authMiddleware,
   userControllers.updateUser
 );
+// testar se este middleware funciona
 router.delete("/:id", authMiddleware, userControllers.deleteUser);
 
 module.exports = router;

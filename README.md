@@ -1,8 +1,8 @@
-  <h1 style ="text-align: center; color:#DBEF80; font-weight: bold;">A64 POST API</h1>
+  <h1 style ="text-align: center;  font-weight: bold;">A64 POST API</h1>
     
 This project is an application developed in Node.js using the MongoDB database. The application allows users to be created with a username, email, and password. Once created, they can create posts.
 
-<h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">Technologies Used </h2>
+<h2 style ="text-align: center;  font-weight: bold;">Technologies Used </h2>
 
 - Node.js
 - Express.js
@@ -20,7 +20,7 @@ _Authentication_
 - Middleware
 - Added authentication to ensure that only authenticated users can create posts and perform other actions.
 
- <h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">How To Run The Project</h2>
+ <h2 style ="text-align: center;  font-weight: bold;">How To Run The Project</h2>
 
 1. Clone the repository to your local machine using the command 
 ```bash
@@ -67,7 +67,7 @@ project-backend/
 ├── app.js
 ```
 
- <h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">API Endpoints and Actions</h2>
+ <h2 style ="text-align: center;  font-weight: bold;">API Endpoints and Actions</h2>
 
 1. Create Users
 
@@ -172,11 +172,11 @@ project-backend/
 - Response (JSON):
   - `message`: User post deleted
 
-<h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">Contribution and Bug Reporting</h2>
+<h2 style ="text-align: center;  font-weight: bold;">Contribution and Bug Reporting</h2>
 
 We appreciate your interest in contributing to our Open Source project! Your collaboration is crucial for the continuous improvement of our platform. If you're a dedicated programmer passionate about creating quality solutions, we're excited to welcome your contribution.
 
-<h3 style ="text-align: center; color:#DBEF80;font-weight: bold;">How to Contribute</h3>
+<h3 style ="text-align: center;  font-weight: bold;">How to Contribute</h3>
 
 1. **Fork the Repository:** Begin by forking our GitHub repository. This will create a copy of the project in your own account.
 
@@ -190,7 +190,7 @@ We appreciate your interest in contributing to our Open Source project! Your col
 
 6. **Submit a Pull Request:** Submit a Pull Request (PR) from your branch to the main branch of the original repository. Clearly describe the purpose of the PR and include any relevant context.
 
-<h3 style ="text-align: center; color:#DBEF80;font-weight: bold;">Bug Reporting</h3>
+<h3 style ="text-align: center;  font-weight: bold;">Bug Reporting</h3>
 
 If you've discovered a bug or issue on our platform, we'd like to hear about it so we can address it promptly. When reporting a bug, follow these steps:
 
@@ -200,7 +200,7 @@ If you've discovered a bug or issue on our platform, we'd like to hear about it 
 
 3. **Include Context:** If possible, provide additional information such as screenshots, error logs, and details about the environment in which the bug occurred.
 
-<h3 style ="text-align: center; color:#DBEF80;font-weight: bold;">What to Expect</h3>
+<h3 style ="text-align: center;  font-weight: bold;">What to Expect</h3>
 
 We sincerely appreciate your contributions to our Open Source community. Our team will review your contributions and provide valuable feedback. Know that your time and effort are highly valued, and together, we can continue to enhance and strengthen our platform.
 

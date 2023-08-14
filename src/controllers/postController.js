@@ -13,7 +13,7 @@ exports.createPost = async (req, res) => {
 };
 
 exports.getAllPosts = async (req, res) => {
-  const userId = req.params.userId;
+  const userId = req.userId;
   const posts = await Post.find({ author: userId }).populate("author", "username");
   res.json(posts);
 };

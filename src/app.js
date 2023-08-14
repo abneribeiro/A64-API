@@ -28,7 +28,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res
     .status(201)
-    .json({ message: "its okay Abner", warning: "read the documentation" });
+    .json({ message: "Abner", warning: "read the documentation to use Api" });
 });
 app.use("/user", userRoutes);
 

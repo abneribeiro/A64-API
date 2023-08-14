@@ -22,15 +22,30 @@ _Authentication_
 
  <h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">How To Run The Project</h2>
 
-1. Clone the repository to your local machine using the command `git clone https://github.com/abneribeiro/A64-API.git`.
+1. Clone the repository to your local machine using the command 
+```bash
+  git clone https://github.com/abneribeiro/A64-API.git
+```
 
-2. Navigate to the project directory using the command `cd directory-name`.
+2. Navigate to the project directory using the command 
+```bash
+  cd directory-name
+```
 
-3. Install project dependencies using the command `npm install`.
+3. Install project dependencies using the command 
+```bash
+  npm install
+```
 
-4. Start the server using the command `node app.js`.
+4. Start the server using the command 
+```bash
+  node app.js
+```
 
-5. The application will be available at `http://localhost:3000`.
+5. The application will be available at 
+```bash
+  http://localhost:3000
+```
 
 6. Use tools like [Postman](https://www.postman.com/) to test routes.
 
@@ -156,3 +171,42 @@ project-backend/
   - `postId`: ID of the post to be deleted.
 - Response (JSON):
   - `message`: User post deleted
+
+<h2 style ="text-align: center; color:#DBEF80;font-weight: bold;">Contribution and Bug Reporting</h2>
+
+We appreciate your interest in contributing to our Open Source project! Your collaboration is crucial for the continuous improvement of our platform. If you're a dedicated programmer passionate about creating quality solutions, we're excited to welcome your contribution.
+
+<h3 style ="text-align: center; color:#DBEF80;font-weight: bold;">How to Contribute</h3>
+
+1. **Fork the Repository:** Begin by forking our GitHub repository. This will create a copy of the project in your own account.
+
+2. **Clone the Repository:** Clone your forked repository to your local development environment.
+
+3. **Create a New Branch:** Create a new branch for the work you intend to do. This helps keep development organized and enables discussion of proposed changes.
+
+4. **Implement Enhancements or Fixes:** Make the necessary code changes. Ensure you follow our style guidelines and best programming practices.
+
+5. **Testing and Validation:** Rigorously test your changes to ensure everything works as expected. Be sure to add new tests as well, when applicable.
+
+6. **Submit a Pull Request:** Submit a Pull Request (PR) from your branch to the main branch of the original repository. Clearly describe the purpose of the PR and include any relevant context.
+
+<h3 style ="text-align: center; color:#DBEF80;font-weight: bold;">Bug Reporting</h3>
+
+If you've discovered a bug or issue on our platform, we'd like to hear about it so we can address it promptly. When reporting a bug, follow these steps:
+
+1. **Search Before Reporting:** Check if the bug has been reported previously in our issue tracking system. This helps to avoid duplications.
+
+2. **Create a New Issue:** If the bug hasn't been reported, create a new issue on our GitHub repository. Provide clear details about the issue, including steps to reproduce it.
+
+3. **Include Context:** If possible, provide additional information such as screenshots, error logs, and details about the environment in which the bug occurred.
+
+<h3 style ="text-align: center; color:#DBEF80;font-weight: bold;">What to Expect</h3>
+
+We sincerely appreciate your contributions to our Open Source community. Our team will review your contributions and provide valuable feedback. Know that your time and effort are highly valued, and together, we can continue to enhance and strengthen our platform.
+
+Thank you for joining us on this journey of development and continuous improvement!
+
+**Development Team**
+
+*A64-Team*
+

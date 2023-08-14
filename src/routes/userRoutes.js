@@ -20,7 +20,7 @@ router.post(
 router.post("/login", userControllers.loginUSer);
 
 router.put(
-  "/:id",
+  "/profile",
   [
     body("username")
       .isLength({ min: 5 })
@@ -31,7 +31,7 @@ router.put(
   authMiddleware,
   userControllers.updateUser
 );
-// testar se este middleware funciona
-router.delete("/:id", authMiddleware, userControllers.deleteUser);
+
+router.delete("/profile", authMiddleware, userControllers.deleteUser);
 
 module.exports = router;

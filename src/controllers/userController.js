@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 const User = require("../models/User");
 const { validationResult } = require("express-validator");
 
@@ -41,18 +42,19 @@ exports.loginUSer = async (req, res) => {
     res.json({ token });
   } catch (error) {
     res.status(500).json({ error: "Failed to authenticate user." });
-    console.log(error)
+    console.log(error);
   }
 };
 
 exports.updateUser = async (req, res) => {
   try {
-    const userId = req.params.id;
+    const userId = req.userId;
     const { username, email, password } = req.body;
-
+    const salt = await bcrypt.genSalt(10);
+    const newPassword = await bcrypt.hash(password, salt);
     const updatedUser = await User.findByIdAndUpdate(
       userId,
-      { username, email, password },
+      { username, email, newPassword },
       { new: true }
     );
 
@@ -63,12 +65,13 @@ exports.updateUser = async (req, res) => {
     res.status(201).json(updatedUser);
   } catch (error) {
     res.status(500).json({ error: "Error updating the user." });
+    console.log(error)
   }
 };
 
 exports.deleteUser = async (req, res) => {
   try {
-    const userId = req.params.id;
+    const userId = req.userId;
     const user = await User.findByIdAndDelete(userId);
     if (!user) {
       return res.status(404).json({ error: "user not found" });

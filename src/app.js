@@ -11,19 +11,19 @@ dotenv.config();
 
 const app = express();
 
-// Configurar o body-parser
+// Configure the body-parser
 app.use(bodyParser.json());
 
 
 app.use(cors());
-// Conectar ao banco de dados MongoDB
+// Conection with database
 connectionDB();
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res
     .status(201)
-    .json({ message: "Abner", warning: "read the documentation to use Api" });
+    .json({ message: "Abner", warning: "Read The Documentation to Use Api" });
 });
 app.use("/user", userRoutes);
 

@@ -1,29 +1,23 @@
-const app = require("express")();
-const mongoose = require("mongoose");
+const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
+const { connectionDB } = require("./config/Connection");
 
 // Carregar as variáveis de ambiente do arquivo .env
 dotenv.config();
 
+const app = express();
+
 // Configurar o body-parser
 app.use(bodyParser.json());
 
-// Configurar o CORS
+
 app.use(cors());
-
 // Conectar ao banco de dados MongoDB
-mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("Error connecting to MongoDB:", err));
-
+connectionDB();
 app.use(express.json());
 
 app.get("/", (req, res) => {

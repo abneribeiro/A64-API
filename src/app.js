@@ -1,4 +1,4 @@
-const express = require("express");
+const app = require("express")();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -9,9 +9,10 @@ const postRoutes = require("./routes/postRoutes");
 // Carregar as variáveis de ambiente do arquivo .env
 dotenv.config();
 
-const app = express();
+// Configurar o body-parser
 app.use(bodyParser.json());
 
+// Configurar o CORS
 app.use(cors());
 
 // Conectar ao banco de dados MongoDB
